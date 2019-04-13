@@ -2,7 +2,7 @@ import os
 import time
 from jsonifier import *
 
-#Dont Be Confused! All the strange functions are imported within the above modules,
+#Dont Be Confused! All the strange functions in here are imported within the above modules,
 #To understand them, go refer to the other modules imported here.
 
 
