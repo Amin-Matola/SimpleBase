@@ -1,5 +1,6 @@
 # SimpleBase
 Database operations and queries from scratch with Python.
+This is raw step towards simplification of database and data operations with pure python.
 
 Usage:
 
@@ -9,7 +10,8 @@ Usage:
 
 --------------------------------------------------------------------------------
 Note: This project is welcoming changes from different support teams untill it gets its full-fledged developments.
-The documentation for the commands will be provided once the development is finished.
+
+The documentation for the commands and efficient usage will be provided once the development is finished.
 
 Kind Regards,
 
