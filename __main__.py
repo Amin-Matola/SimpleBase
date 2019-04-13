@@ -16,7 +16,6 @@ def runner(command):
 	get()
 
 
-os.system("cls")
 print(" Simple Base Version 0.1.0, Initial Release On %s (Version %s.%s.%s)."%(os.sys.platform,
 	os.sys.getwindowsversion().platform_version[0],
 	os.sys.getwindowsversion().platform_version[1],
