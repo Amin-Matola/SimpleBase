@@ -3,13 +3,13 @@ import time
 from jsonifier import *
 
 
-flag=False
-def runner(strings):
-	func	= compile(strings,'test','eval')
+
+def runner(command):
+	func	= compile(command,'test','eval')
 	try:
 		exec(func)
 	except Exception as e:
-		print(" Command ",strings," not recognized!")
+		print(" Command ",command," not recognized!")
 	print('')
 	get()
 
