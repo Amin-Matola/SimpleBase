@@ -10,6 +10,7 @@ Usage:
 
 --------------------------------------------------------------------------------
 Note: This project is welcoming changes from different support teams untill it gets its full-fledged developments.
+And this project use functional programming because of how big the project code is
 
 The documentation for the commands and efficient usage will be provided once the development is finished.
 
