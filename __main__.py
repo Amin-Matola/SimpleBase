@@ -9,8 +9,7 @@ def runner(strings):
 	try:
 		exec(func)
 	except Exception as e:
-		print("Error : %s"%e)
-		print(strings," not recognized!")
+		print(" Command ",strings," not recognized!")
 	print('')
 	get()
 
