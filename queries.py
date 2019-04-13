@@ -31,8 +31,8 @@ def show_databases():
 		for a in dirn:
 			folders.append(a)
 		break
-	if len(folders):
-		print(".-------------------------------.")
+	
+	print(".-------------------------------.")
 	print("|  Databases    \t\t|")
 	print("|-------------------------------|")
 	if len(folders):
