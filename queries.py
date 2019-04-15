@@ -5,10 +5,12 @@ from colorama import Back,Fore
 colors = [(Back.LIGHTMAGENTA_EX+Fore.LIGHTWHITE_EX)]
 
 name=''
-rpath=os.path.abspath(sys.argv[0]).split('\\')
-here=rpath.copy()
-here[-1]=''
-path=os.path.join("\\".join(here),'databases')
+# rpath=os.path.abspath(sys.argv[0]).split('\\')
+# here=rpath.copy()
+# here[-1]=''
+
+main_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
+path=os.path.join(main_dir,'databases')
 recpath=''
 def shell():
 	for m in colors:
@@ -24,8 +26,8 @@ def create_database(name):
 
 def show_databases():
 	folders=[]
-	here=rpath.copy()
-	here[-1]=''
+	#here=rpath.copy()
+	#here[-1]=''
 	#path="\\".join(here)
 	for dirp,dirn,fs in os.walk(path):
 		for a in dirn:
@@ -113,16 +115,10 @@ def use(n):
 	name=n
 
 def op():
-	#current=os.path.abspath(sys.argv[0]).split('\\')
-	#current[-1]=name
-	#path="\\".join(current)+".csv"
 	f=open(os.path.join(recpath,name+'.csv'),'r+')
 	return f
 
 def create_table(table,*args):
-	# here=rpath.copy()
-	# here[-1]=table
-	#file='\\'.join(here)+'.csv'
 	if len(table)>25:
 		print(" Table names can not be more than 25 characters!")
 		return
@@ -143,7 +139,6 @@ def insert_into(table,*args):
 		use(table)
 	f=op()
 	f.seek(0,2)
-	#f.write("%s,%s,%s\n"%(str(a[0]),str(a[1]),str(a[2])))
 	l=["%s,"%(str(b)[::-1].strip('[]')) for b in args]
 	l[-1]=l[-1].strip(',[]')+"\n"
 	f.writelines(l)
@@ -156,7 +151,6 @@ def insert_all(table,*args):
 	f=op()
 	for a in args:
 		f.seek(0,2)
-		#f.write("%s,%s,%s\n"%(str(a[0]),str(a[1]),str(a[2])))
 		l=["%s,"%(str(b)[::-1].strip('[]')) for b in a]
 		l[-1]=l[-1].strip(',[]')+"\n"
 		f.writelines(l)
@@ -184,16 +178,12 @@ def update_table(table,column,fvalue='',lvalue=''):
 			pass
 		lists1[d]=[a[::-1] for a in lists1[d]]
 
-	#pat=os.path.join(recpath,table+".csv")
-	#print(recpath)
 	open(os.path.join(recpath,table+'.csv'),'w').close()
 	for l in lists1:
 		f=open(os.path.join(recpath,table+'.csv'),'a+')
 		#f.seek(0,0)
 		f.writelines(','.join(l).strip(','))
 		f.write('\n')
-	#print(lists1)
-	#print(" List length = %d\n %s Position"%(len(lists),c))
 
 def select_all(table='',n=''):
 	if table:
@@ -219,7 +209,6 @@ def select_all(table='',n=''):
 		print(ls+"\t\t|")
 	else:
 		print(ls+"\t\t|")
-	#return
 
 	print("|"+'-'*(18*len(headers)-1)+'|')
 	a=0
@@ -242,7 +231,7 @@ def select_all(table='',n=''):
 							print("|",i,l+' \t|')
 						else:
 							print("|",i,l+' \t|')
-					#print("|",i,"\t",lists[i][a],"\t\t|",lists[i][a+1],"\t\t|",lists[i][a+2],"\t")
+					
 				else:
 					lis=["   \t|%s"%(str(b)[::-1]) for b in lists[i]]
 					for k in lis:
@@ -255,8 +244,7 @@ def select_all(table='',n=''):
 							print("|",i,l+' \t|')
 						else:
 							print("|",i,l+' \t|')
-				#print(len(l.split('\t')[-1]))
-					#print("|",i,"\t",lists[i][a],"\t|",lists[i][a+1],"\t\t|",lists[i][a+2],"\t")
+				
 				print("|"+'_'*(18*len(headers)-1)+"|")
 	print(" ",len(data)-1,"rows affected!")
 	f.close()
@@ -276,7 +264,6 @@ def delete(*c):
 		data.pop(i+1)
 	f.seek(0,0)
 	f.writelines(data)
-	#f.writelines([])
 	print(' %d row affected!'%len(c))
 
 def clear():
