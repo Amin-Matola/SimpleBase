@@ -26,8 +26,11 @@ print("*"*75+"\n")
 def get():
 
 	line=input(":sb> ")
+	
 	if not line:
 		get()
+		
+	line=line.strip(";")
 	if(line=='quit'):
 		return None
 	if len(line.split(' '))>1:
