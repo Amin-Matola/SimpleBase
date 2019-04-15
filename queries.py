@@ -2,20 +2,19 @@ import os,subprocess,sys
 from zipfile import ZipFile
 import time
 from colorama import Back,Fore
-colors = [(Back.LIGHTMAGENTA_EX+Fore.LIGHTWHITE_EX)]
+
 
 name=''
-# rpath=os.path.abspath(sys.argv[0]).split('\\')
-# here=rpath.copy()
-# here[-1]=''
 
 main_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
 path=os.path.join(main_dir,'databases')
 recpath=''
+
+shell_colors = [(Back.LIGHTMAGENTA_EX+Fore.LIGHTWHITE_EX)]
 def shell():
-	for m in colors:
+	for m in shell_colors:
 		print(m)
-		#time.sleep(1)
+		
 
 
 def create_database(name):
