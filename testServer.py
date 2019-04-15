@@ -6,11 +6,11 @@ app=Flask(__name__)
 @app.route('/send',methods=['GET','POST'])
 def send():
 	if request.method=='POST':
-		return "POST / AMIN TEST SERVER V-0.1.0 \nForm Data Received:\n%s"%str(
-			request.form['Subject'])
+		return "POST / SIMPLEBASE TEST SERVER V-0.1.0 \nForm Data Received:\n%s"%str(
+			request.form)
 	else:
-		return "POST / AMIN TEST SERVER V-0.1.0 \nForm Data Received:\n%s"%str(
-			request.args.get('Subject','Not available'))
+		return "POST / SIMPLEBASE TEST SERVER V-0.1.0 \nForm Data Received:\n%s"%str(
+			request.args.to_dict())
 
 
 if __name__ == '__main__':
