@@ -25,9 +25,6 @@ def create_database(name):
 
 def show_databases():
 	folders=[]
-	#here=rpath.copy()
-	#here[-1]=''
-	#path="\\".join(here)
 	for dirp,dirn,fs in os.walk(path):
 		for a in dirn:
 			folders.append(a)
@@ -72,9 +69,6 @@ def drop_database(name):
 
 def show_tables():
 	files=[]
-	# here=rpath.copy()
-	# here[-1]=''
-	# path="\\".join(here)
 	if not recpath:
 		print('  No database selected!')
 		return
