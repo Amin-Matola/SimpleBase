@@ -24,7 +24,6 @@ print(" "+time.ctime(),"(%s)"%time.tzname[0])
 print("*"*75+"\n")
 
 def get():
-
 	line=input(":sb> ")
 	
 	if not line:
