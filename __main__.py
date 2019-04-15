@@ -15,6 +15,7 @@ def runner(command):
 	print('')
 	get()
 
+#--------------------Print headers for this program-------------------------------------------
 
 print(" Simple Base Version 0.1.0, Initial Release On %s (Version %s.%s.%s)."%(os.sys.platform,
 	os.sys.getwindowsversion().platform_version[0],
@@ -22,10 +23,15 @@ print(" Simple Base Version 0.1.0, Initial Release On %s (Version %s.%s.%s)."%(o
 	os.sys.getwindowsversion().platform_version[2]))
 print(" "+time.ctime(),"(%s)"%time.tzname[0])
 print("*"*75+"\n")
+#------------------------------Now Get User Commands--------------------------------
 
 def get():
-	line=input(":sb> ")
+	#This function gets user commands, parse it, and send the command to runner 
+	#to call the related function
 	
+	line=input(":sb> ").strip(';')
+	
+	#if user didnt enter any command, start again
 	if not line:
 		get()
 		
