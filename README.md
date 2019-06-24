@@ -11,14 +11,17 @@ Usage:
 --------------------------------------------------------------------------------
 Note: This project is welcoming changes from different support teams untill it gets its full-fledged developments.
 And this project use functional programming because of how big the project code is
+
 -----------------------------------------------------------------------------------
 |                                UPDATE NOTICE                                      |
 -----------------------------------------------------------------------------------
 This project is now well fledge, and can now be run on the web as a data warehouse.
 The functional programming design is no longer existing, and now it uses OOP programming.
-It now has got a trial project for manipulating the data and can be found at http://learners.pythonanywhere.com/simplebase
+It now has got a trial project for manipulating the data and can be found at:
+http://learners.pythonanywhere.com/simplebase
 
-The documentation for the commands and efficient usage can be found at http://learners.pythonanywhere.com/simplebase?doc=true.
+The documentation for the commands and efficient usage can be found at:
+http://learners.pythonanywhere.com/simplebase?doc=true.
 
 Kind Regards,
 
