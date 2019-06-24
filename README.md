@@ -15,8 +15,8 @@ And this project use functional programming because of how big the project code 
 -----------------------------------------------------------------------------------
 |                                UPDATE NOTICE                                      |
 -----------------------------------------------------------------------------------
-This project is now well fledge, and can now be run on the web as a data warehouse.
-The functional programming design is no longer existing, and now it uses OOP programming.
+This project is now well fledged, and can now be run on the web as a data warehouse.
+The functional programming design is no longer existing, and now it uses Object Oriented Programming Design.
 It now has got a trial project for manipulating the data and can be found at:
 http://learners.pythonanywhere.com/simplebase
 
