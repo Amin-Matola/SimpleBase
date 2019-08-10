@@ -1,6 +1,6 @@
 # SimpleBase
 Database operations and queries from scratch with Python.
-![Simple Base Image](http://amix.pythonanywhere.com/static/projects/bs2.PNG)
+![Simple Base Image](http://learners.pythonanywhere.com/static/images/sBase.PNG)
 This is raw step towards simplification of database and data operations with pure python.
 
 Usage:
