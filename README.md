@@ -48,6 +48,10 @@ With the record tracker so far, you can do the following core activities:
 - Just click on the **View json** on the sidebar of the project, and you are good to go.
 ![Simple Base Json Conversion](http://amix.pythonanywhere.com/static/projects/bs2.PNG)
 
+5. [ ] **Merge** tables/records
+- You are not but free to manipulate the data in hand; the Tracker also allows you to merge your tables no matter how many you choose.
+- Just click on **Merge** button, seen below the tables, and select the tables you want to merge, hence you are done.
+
 This is the record tracker for the Simple Base project, the documentation for the core Command Program  and efficient usage can be found at:
 [Simple Base Documentation](http://learners.pythonanywhere.com/simplebase?doc=true).
 
