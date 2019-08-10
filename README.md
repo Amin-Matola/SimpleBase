@@ -11,7 +11,7 @@ Usage:
 ```shell
 C:\User> python __main__.py
 ```
-2. All the rest of the files will be imported automatically
+2. All the rest of the files will be imported automatically and a clear console will be presented to you.
 3. For uploading data to server test, use the testServer.py as a simple server.
 
 --------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ This project is now well fledged, and can now be run on the web as a data wareho
 The functional programming design is no longer existing, and now it uses Object Oriented Programming Design.
 It now has got a trial project for manipulating the data and can be found at:
 [Simple Base](http://learners.pythonanywhere.com/simplebase)
-With the record tracker, you can:
+With the record tracker so far, you can do the following core activities:
 
 1. [x] Create records on the go
 - You can either create your records by filling the form or
@@ -38,17 +38,17 @@ With the record tracker, you can:
 - You can do so by clicking on the **From URL**, seen from the left pane of the project
 --**Note**: so far, Pythonanywhere do not accept some urls/sites.
 
-2. [ ] Visualize your data
+3. [ ] Visualize your data
 - This can be achieved by clicking on the **Visualize** button on the sidebar of the Tracker
 - Select the necessary fields to visualize, hence you are good to go.
 
 ![Simple Visualization](http://amix.pythonanywhere.com/static/projects/visualize.PNG)
 
-3. [ ] View Json of your data/download Json
+4. [ ] View Json of your data/download Json
 - Just click on the **View json** on the sidebar of the project, and you are good to go.
 ![Simple Base Json Conversion](http://amix.pythonanywhere.com/static/projects/bs2.PNG)
 
-The documentation for the commands and efficient usage can be found at:
+This is the record tracker for the Simple Base project, the documentation for the core Command Program  and efficient usage can be found at:
 [Simple Base Documentation](http://learners.pythonanywhere.com/simplebase?doc=true).
 
 **_Amin Matola_** (The _Pythonista_ :snake: )
