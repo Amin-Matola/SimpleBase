@@ -5,13 +5,14 @@ import time
 from colorama import Back,Fore
 
 
-name=''
+name		= ''
 
-main_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
-path=os.path.join(main_dir,'databases')
-recpath=''
+main_dir 	= os.path.split(os.path.abspath(sys.argv[0]))[0]
+path		= os.path.join(main_dir,'databases')
+recpath		= ''
 
-shell_colors = [(Back.LIGHTMAGENTA_EX+Fore.LIGHTWHITE_EX)]
+shell_colors 	= [(Back.LIGHTMAGENTA_EX+Fore.LIGHTWHITE_EX)]
+
 def shell():
       for m in shell_colors:
         print(m)
@@ -21,8 +22,10 @@ def shell():
 def create_database(name):
       if not os.path.exists(path):
         os.mkdir(path)
-      os.chdir(path)
-      os.mkdir(name)
+      else:
+	print("Table %s already exists" % name)
+      #os.chdir(path)
+      #os.mkdir(name)
 
 def show_databases():
       folders=[]
