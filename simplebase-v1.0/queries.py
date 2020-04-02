@@ -112,26 +112,30 @@ def desc_table(name):
 
 def use(n):
       global name
-      name=n
+      name	= n
 
 def op():
-      f=open(os.path.join(recpath,name+'.csv'),'r+')
+      f		= open(os.path.join(recpath,name+'.csv'),'r+')
       return f
 
 def create_table(table,*args):
-      if len(table)>25:
-        print(" Table names can not be more than 25 characters!")
-        return
-      file=os.path.join(recpath,table+'.csv')
-      open(file.strip("\'"),'x').close()
+	if len(table)>25:
+		print(" Table names can not be more than 25 characters!")
+		return
+	if not len(args):
+		print(" Usage error: Please refer the documentation at http://learners.pythonanywhere.com/simplebase?doc=1")
+		return
+	
+	file 	= os.path.join(recpath,table+'.csv')
+	open(file.strip("\'"),'x').close()
 
-      f=open(file,'r+')
-      f.seek(0,0)
-      names=[str(a)[::-1]+"," for a in args[0:]]
-      names[-1]=names[-1].strip(',')+"\n"
-      f.writelines(names)
-      f.close()
-      print(" Table %s created"%table)
+	f		= open(file,'r+')
+	f.seek(0,0)
+	names	= [str(a)[::-1]+"," for a in args[0:]]
+	names[-1]	= names[-1].strip(',')+"\n"
+	f.writelines(names)
+	f.close()
+	print(" Table %s created"%table)
 		
 
 def insert_into(table,*args):
