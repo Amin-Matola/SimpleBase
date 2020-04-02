@@ -58,9 +58,12 @@ def show_databases():
 
 
 def use_database(name):
-      global recpath
-      recpath=os.path.join(path,name)
-      print('  Database changed, %s used!'%name)
+      if os.path.exists(os.path.join(path,name)):
+            global recpath
+            recpath=os.path.join(path,name)
+            print('  Database changed, %s used!'%name)
+      else:
+            print("   Database %s not exist"%name)
 	
 def drop_database(name):
       dpath=os.path.join(path,name)
