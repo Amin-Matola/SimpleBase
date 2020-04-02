@@ -7,18 +7,19 @@ from jsonifier import *
 #To understand them, go refer to the other modules imported here.
 
 
-def runner(command):
+def runner(command, line):
 	func	= compile(command,'test','eval')
 	try:
 		exec(func)
 	except Exception as e:
-		print(" Command "," ".join(command.strip("()").split("_"))," not recognized!")
+		print(" Command ",line," not recognized!")
 	print('')
 	get()
 
 #--------------------Print headers for this program-------------------------------------------
 
-print(" Simple Base Version 0.1.0, Initial Release On %s (Version %s.%s.%s)."%(os.sys.platform,
+print(" Simple Base Version 0.1.0, Initial Release On %s (Version %s.%s.%s)."%(
+	os.sys.platform,
 	os.sys.getwindowsversion().platform_version[0],
 	os.sys.getwindowsversion().platform_version[1],
 	os.sys.getwindowsversion().platform_version[2]))
@@ -30,7 +31,8 @@ def get():
 	#This function gets user commands, parse it, and send the command to runner 
 	#to call the related function
 	
-	line=input(":sb> ").strip(';')
+	raw 	= input(":sb> ").strip(';')
+	line	= raw;
 	
 	#if user didnt enter any command, start again
 	if not line:
@@ -60,7 +62,7 @@ def get():
 	if len(line.split(' '))<=1 and len(line.split('('))<=1:
 		print('True')
 		line+="()"
-	runner(line)
+	runner(line, raw)
 shell()
 clear()
 get()
