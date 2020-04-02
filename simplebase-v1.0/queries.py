@@ -23,7 +23,7 @@ def create_database(name):
       if not os.path.exists(path):
             os.mkdir(path)
       else:
-            print("Table %s already exists"%name)
+            print("Database %s already exists"%name)
       #os.chdir(path)
       #os.mkdir(name)
 
