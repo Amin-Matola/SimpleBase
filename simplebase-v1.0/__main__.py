@@ -12,7 +12,7 @@ def runner(command):
 	try:
 		exec(func)
 	except Exception as e:
-		print(" Command ",command," not recognized!")
+		print(" Command "," ".join(command.strip("()").split("_"))," not recognized!")
 	print('')
 	get()
 
